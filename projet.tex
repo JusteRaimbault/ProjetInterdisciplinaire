@@ -1,0 +1,160 @@
+
+\documentclass[11pt]{article}
+
+% general packages without options
+%\usepackage{amsmath,amssymb,bbm}
+% graphics
+\usepackage{graphicx}
+% text formatting
+\usepackage[document]{ragged2e}
+%\usepackage{pagecolor,color}
+
+\newcommand{\noun}[1]{\textsc{#1}}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+% geometry
+\usepackage[margin=2cm]{geometry}
+
+\usepackage{multicol}
+\usepackage{setspace}
+
+\usepackage{natbib}
+\setlength{\bibsep}{0.0pt}
+
+\usepackage[french]{babel}
+
+% layout : use fancyhdr package
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+
+% variable to include comments or not in the compilation ; set to 1 to include
+\def \draft {0}
+
+
+% writing utilities
+
+% comments and responses
+%  -> use this comment to ask questions on what other wrote/answer questions with optional arguments (up to 4 answers)
+\usepackage{xparse}
+\usepackage{ifthen}
+\DeclareDocumentCommand{\comment}{m o o o o}
+{\ifthenelse{\draft=1}{
+    \textcolor{red}{\textbf{C : }#1}
+    \IfValueT{#2}{\textcolor{blue}{\textbf{A1 : }#2}}
+    \IfValueT{#3}{\textcolor{ForestGreen}{\textbf{A2 : }#3}}
+    \IfValueT{#4}{\textcolor{red!50!blue}{\textbf{A3 : }#4}}
+    \IfValueT{#5}{\textcolor{Aquamarine}{\textbf{A4 : }#5}}
+ }{}
+}
+
+% todo
+\newcommand{\todo}[1]{
+\ifthenelse{\draft=1}{\textcolor{red!50!blue}{\textbf{TODO : \textit{#1}}}}{}
+}
+
+
+
+%\makeatletter
+
+
+%\makeatother
+
+
+
+\title{Projet Interdisciplinaire : Introduction à la Géographie Intégrée\\\medskip
+\textit{Proposition de Maquette}
+}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+%
+
+%\pagenumbering{gobble}
+
+
+\paragraph{Type d'enseignement} 
+
+Projet de groupe
+
+\paragraph{Public}
+
+Masters 2 Geoprisme et Carthageo (participation commune nécessaire)
+
+\paragraph{Semestre}
+
+Automne 2017-2018
+
+\paragraph{Nombre d'heures}
+
+32h
+
+\paragraph{Crédits}
+
+6ECTS
+
+\paragraph{Langue d'enseignement}
+
+Français (Anglais possible selon les intervenants)
+
+
+\justify
+
+\subsection*{Contexte}
+
+La Géographie Théorique et Quantitative a toujours été fertile en termes d'interdisciplinarité et de démarches intégrant méthodes ``qualitatives'' et ``quantitatives''. La démarche de modélisation peut être interprétée comme l'un des moteurs de cette dynamique. Les mutations récentes, telles l'introduction de nouvelles données et nouvelles possibilité de calcul, ouvrent des perspectives qui peuvent trouver leur sens dans une approche toujours plus intégrée, au sens des méthodes, des disciplines et des objets, comme le montre l'exemple de~\cite{pumain2017urban}. La possibilité de l'émergence d'une \emph{Géographie Intégrée} au travers de ces travaux a été récemment discutée par~\cite{raimbault:halshs-01505084}. L'introduction des élèves à ce type d'approche est non seulement pertinent de par la qualité de leur compétences dans des domaines variés, mais nécessaire pour leur positionnement dans les approches complexes qui joueront un rôle clé dans la géographie de demain pour des connaissances plus larges et plus profondes~(\cite{banos2017knowledge}).
+
+
+
+
+\subsection*{Descriptif du cours}
+
+L'objectif de ce cours est de mener de bout en bout un projet de recherche interdisciplinaire modeste, dans une relative autonomie. Les élèves devront former des groupes hétérogènes rassemblant des compétences de différents domaines (dans la mesure de celles accessibles aux élèves, majoritairement géographie et géomatique par exemple) et formuler une problématique de recherche rentrant dans le cadre d'une Géographie Intégrée, c'est à dire s'appuyant de manière fortement couplée sur plusieurs domaines de connaissances (parmi l'Empirique, le Théorique, la Modélisation, la Méthodologie, les Outils et les Données). La recherche des données éventuelles fait également partie de la construction du projet (les élèves auront à leur disposition des jeux de données d'exemple et des jeux internes à Géographie-cités). Une demi-dizaine de séances de 2h de type hybride cours magistral/TP brossera un aperçu du contexte, d'exemples et de types de méthodes d'analyse utilisables et accessible au niveau technique des élèves, pour la plupart issues des Sciences des Systèmes Complexes (par exemple fouille de données spatio-temporelle, modélisation basée-agents, analyse de réseaux complexes), complétées par une mise en pratique des méthodes sur des exemples simples. Le reste des créneaux horaires sera dédié au suivi hebdomadaire des projets.
+
+\subsection*{Pré-requis}
+
+Les groupes devront comprendre par exemple une combinaison des compétences suivantes pour le côté méthodologique :
+\textit{Analyse spatiale ; Méthodes d'enquête de terrain ; Systèmes d'Information Géographique ; Epistémologie ; Epistémologie Appliquée}. L'aspect théorique et empirique est laissé totalement ouvert car conditionné au choix de la problématique.
+
+\medskip
+
+L'utilisation de méthodes et d'outils ouverts et le positionnement dans une démarche de Science Ouverte seront nécessaire pour une validation du projet (transparence, reproductibilité totale, \ldots). L'évaluation se basera principalement sur le caractère intégré des projets de recherche, leur originalité et la justesse scientifique de la démarche, bien plus que sur un arbitraire ``niveau technique'' des traitements effectués qui ne sera pas un pré-requis.
+
+\subsection*{Enseignants}
+
+\paragraph{Responsable du cours} J. Raimbault (UMR CNRS 8504 Géographie-cités)
+
+\paragraph{Responsable Administratif} \textit{un/une volontaire qui a les qualifications requises ?}
+
+\subsection*{Mode de validation}
+
+A la fin du semestre, un rendu par groupe de type article scientifique mi-long (dizaine de pages), devra rendre compte de l'ensemble du projet et des résultats obtenus. Une soutenance complétera l'évaluation de l'article.
+
+
+
+%\subsection*{Lectures proposées}
+\renewcommand{\bibsection}{\subsection*{Lectures proposées}}
+
+
+\bibliographystyle{apalike}
+\bibliography{/Users/Juste/Documents/ComplexSystems/CityNetwork/Biblio/BibTeX/CityNetwork.bib}
+
+
+\subsection*{Intervenants}
+
+\textit{A préciser}
+
+
+
+
+
+
+
+
+\end{document}
+
